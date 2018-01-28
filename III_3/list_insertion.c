@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 typedef struct node* link;
 typedef struct node {int item; link next;} node;
@@ -49,6 +50,7 @@ void insert_item(int item, link s)
 
 int main() 
 {
+    srand(time(NULL));
     link t = create_list(10);  
     print_list(t);
     insert_item(10, get_nth_item(5, t));
